@@ -1,6 +1,6 @@
 <ion-app>
 
-    <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu"  >
+    <ion-menu auto- side="start" menuId="custom" contentId="main" class="my-custom-menu"  >
  
         <ion-header>
           <ion-toolbar color="tertiary">
@@ -31,10 +31,10 @@
               
               Roles
             </ion-item>
-            <ion-item  color= "light">
+            <ion-item [routerLink]="['/login-ingresar']" (click)="onLogout()"  color= "light">
               <ion-icon name="settings-outline"></ion-icon>
               <!-- <ion-img class= "logoprincipal" src ="assets\icon\configuraricon.png"></ion-img> -->
-              Configurar
+              Cerrar Sesion
             </ion-item>
           </ion-list>
         </ion-content>

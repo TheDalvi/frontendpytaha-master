@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UsuarioService {
-
+  headers ={"x-token":localStorage.getItem("x-token")};
   datos = new EventEmitter();
   constructor(private http:HttpClient) { }
 
@@ -20,6 +20,23 @@ export class UsuarioService {
       this.getAll();
     });
 
+
+  }
+
+  public login(data): Observable<any>{
+
+    console.log(data);
+
+   return this.http.post(`${environment.url}/usuario/login`,data);
+
+  
+  }
+
+  public logout(): Observable<any>{
+
+    let usuario = localStorage.getItem("usuario")
+
+   return this.http.post(`${environment.url} /usuario/logout`,usuario,{headers:this.headers});
 
   }
 

@@ -15,7 +15,7 @@
    <ion-col size="10" >
     <ion-item class="colorlogin inputG">
       <ion-label color="dark"  position="floating">Username</ion-label>
-      <ion-input  type="email"  > </ion-input>
+      <ion-input name="email" [(ngModel)]="Email" class="ion-no-margin"  type="email"  > </ion-input>
     </ion-item>
 
    </ion-col>
@@ -29,7 +29,7 @@
   <ion-col size="10">
    <ion-item class="colorlogin inputG">
      <ion-label color="dark" position="floating">Password</ion-label>
-     <ion-input class="inputG colorlogin" type="password"> </ion-input>
+     <ion-input name="password" [(ngModel)]="Password" class="inputG colorlogin" type="password"> </ion-input>
    </ion-item>
   </ion-col>
 
@@ -42,7 +42,7 @@
   <ion-col  size="1"></ion-col>
   
  <ion-col size="10">
-  <ion-button color="primary" [routerLink]="['/alquiler-list']" expand="block" shape="round" >
+  <ion-button color="primary" [routerLink]="['/alquiler-list']" (click)="onClick()" expand="block" shape="round" >
     Iniciar Sesion
 </ion-button>
  </ion-col>

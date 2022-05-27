@@ -7,12 +7,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AlquilerService {
-
+  headers ={"x-token":localStorage.getItem("x-token")};
   constructor(private http:HttpClient) { }
   datos = new EventEmitter();
 
   public getAll() :void{
-    this.http.get(`${environment.url}/alquiler/getall`).subscribe(x=>
+    console.log(this.headers)
+    this.http.get(`${environment.url}/alquiler/getall`,{headers:this.headers}).subscribe(x=>
       {
         console.log(x)
         this.datos.emit(x)}
