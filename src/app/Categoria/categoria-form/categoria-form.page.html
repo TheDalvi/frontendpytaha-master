@@ -1,0 +1,40 @@
+<ion-header>
+
+    <ion-toolbar class="new-background-color">
+        <ion-buttons>
+            <ion-back-button class="butonicon" (click)="onClickBack()">
+
+            </ion-back-button>
+            <ion-title class="tilte">Categoria</ion-title>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <form [formGroup]="this.form" class="login-section ion-padding" [scrollTop]=true>
+
+        <div class="heading ion-padding">
+            <h1>Data</h1>
+
+        </div>
+        <div class="login-form ion-padding">
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Descripcion</ion-label>
+                    <ion-input formControlName="Descripcion" type="text" placeholder="Descipcion"></ion-input>
+                </ion-item>
+            </div>
+            <div class="form-input" *ngIf="false">
+
+                <ion-item>
+                    <ion-label position="floating">id</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+            </div>
+        </div>
+        <div class="action-buttons ion-padding">
+            <ion-button type="submit" color="danger" class="login-button" (click)="onClickCreate()">Guardar</ion-button>
+        </div>
+    </form>
+</ion-content>

@@ -1,0 +1,114 @@
+<ion-header>
+
+    <ion-toolbar class="new-background-color">
+        <ion-buttons>
+            <ion-back-button class="butonicon" (click)="onClickBack()">
+
+            </ion-back-button>
+            <ion-title class="tilte">Categoria</ion-title>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <form [formGroup]="this.form" class="login-section ion-padding" [scrollTop]=true>
+
+        <div class="heading ion-padding">
+            <h1>Data</h1>
+
+        </div>
+        <div class="login-form ion-padding">
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Descripcion</ion-label>
+                    <ion-input formControlName="Descripcion" type="text" placeholder="Descipcion"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Foto (URL)</ion-label>
+                    <ion-input formControlName="Foto" type="text" placeholder="Descipcion"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Latitud</ion-label>
+                    <ion-input formControlName="Lat" type="text" placeholder="Latitud"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Longitud</ion-label>
+                    <ion-input formControlName="Lon" type="text" placeholder="Longitud"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Acepta Mascotas</ion-label>
+                    <ion-input formControlName="AceptaMascota" type="text" placeholder="Acepta Mascotas"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Referencia</ion-label>
+                    <ion-input formControlName="Referencia" type="text" placeholder="Referencia"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Precio</ion-label>
+                    <ion-input formControlName="Precio" type="number" placeholder="Precio"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Cantidad de habitaciones</ion-label>
+                    <ion-input formControlName="CantidadHabitaciones" type="number" placeholder="Precio"></ion-input>
+                </ion-item>
+            </div>
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Observacion</ion-label>
+                    <ion-input formControlName="Observacion" type="text" placeholder="Observacion"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Telefono</ion-label>
+                    <ion-input formControlName="telefono" type="text" placeholder="Telefono"></ion-input>
+                </ion-item>
+            </div>
+
+
+            <ion-item>
+                <ion-label>Categoria</ion-label>
+                <ion-select name="select" [(ngModel)]="binding" [ngModelOptions]="{standalone: true}" (ionChange)="onChange($event)">
+                    <ion-select-option *ngFor="let item of categorias" [value]="item.Id">
+                        {{item.Descripcion}}
+                    </ion-select-option>
+                </ion-select>
+            </ion-item>
+
+
+            <div class="form-input" *ngIf="false">
+
+                <ion-item>
+                    <ion-label position="floating">id</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+            </div>
+        </div>
+        <div class="action-buttons ion-padding">
+            <ion-button type="submit" color="danger" class="login-button" (click)="onClickCreate()">Guardar</ion-button>
+        </div>
+    </form>
+</ion-content>

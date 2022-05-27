@@ -1,0 +1,59 @@
+<ion-app>
+
+    <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu"  >
+ 
+        <ion-header>
+          <ion-toolbar color="tertiary">
+            <ion-title>Menú</ion-title>
+           
+          </ion-toolbar>
+        </ion-header>
+        <ion-content >
+          <ion-list  >
+            <ion-item [routerLink]="['/userconfig']" expand="block" color="light">
+              <ion-icon    name="people-outline"></ion-icon>
+              
+              Perfil
+            </ion-item >
+            <ion-item  [routerLink]="['/alquiler-form']" expand="block"  color= "light">
+              <ion-icon name="search-circle-outline"  shape="round"></ion-icon>
+              <!-- <ion-img  class= "logoprincipal" src ="assets\icon\exploraicon.png"></ion-img> -->
+              Publicar Espacio
+             
+            </ion-item>
+            <ion-item [routerLink]="['/categoria-list']" expand="block"  color= "light" >
+              <ion-icon name="heart-outline"></ion-icon>
+              <!-- <ion-img   class= "logoprincipal" src ="assets\icon\favoritoicon.png"></ion-img> -->
+              Categorias
+            </ion-item>
+            <ion-item [routerLink]="['/rol-list']" expand="block" color= "light" >
+              <ion-icon name="chatbox-outline"></ion-icon>
+              
+              Roles
+            </ion-item>
+            <ion-item  color= "light">
+              <ion-icon name="settings-outline"></ion-icon>
+              <!-- <ion-img class= "logoprincipal" src ="assets\icon\configuraricon.png"></ion-img> -->
+              Configurar
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      
+        <ion-grid >
+          <ion-row>
+            <ion-img class= "logoprincipal2" src ="assets\icon\slideicon.png"></ion-img>
+            
+            
+          </ion-row>
+          
+        </ion-grid>
+        <div class="ion-text-center">
+          <h3>Versión 0.0.1</h3>
+        
+        </div>
+      </ion-menu>
+   
+
+      <ion-router-outlet id="main"></ion-router-outlet>
+
+</ion-app>

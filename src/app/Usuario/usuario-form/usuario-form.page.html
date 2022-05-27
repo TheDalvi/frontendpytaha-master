@@ -1,0 +1,84 @@
+<ion-header>
+
+    <ion-toolbar class="new-background-color">
+        <ion-buttons>
+            <ion-back-button class="butonicon" (click)="onClickBack()">
+
+            </ion-back-button>
+            <ion-title class="tilte">Usuario</ion-title>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <form [formGroup]="this.form" class="login-section ion-padding" [scrollTop]=true>
+
+        <div class="heading ion-padding">
+            <h1>Data</h1>
+
+        </div>
+        <div class="login-form ion-padding">
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Nombre</ion-label>
+                    <ion-input formControlName="Nombre" type="text" placeholder="Nombre"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Email</ion-label>
+                    <ion-input formControlName="Email" type="text" placeholder="Email"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Telefono</ion-label>
+                    <ion-input formControlName="Telefono" type="text" placeholder="Telefono"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Rol</ion-label>
+                    <ion-input formControlName="Rol" type="text" placeholder="Rol"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Password</ion-label>
+                    <ion-input formControlName="Password" type="text" placeholder="Password"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Token</ion-label>
+                    <ion-input formControlName="Token" type="text" placeholder="Token"></ion-input>
+                </ion-item>
+            </div>
+
+            <div class="form-input">
+                <ion-item>
+                    <ion-label position="floating">Usuario</ion-label>
+                    <ion-input formControlName="Usuario" type="text" placeholder="Usuario"></ion-input>
+                </ion-item>
+            </div>
+
+
+            <div class="form-input" *ngIf="false">
+
+                <ion-item>
+                    <ion-label position="floating">id</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+            </div>
+        </div>
+        <div class="action-buttons ion-padding">
+            <ion-button type="submit" color="danger" class="login-button" (click)="onClickCreate()">Guardar</ion-button>
+        </div>
+    </form>
+</ion-content>
